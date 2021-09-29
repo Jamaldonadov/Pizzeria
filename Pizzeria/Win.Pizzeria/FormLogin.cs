@@ -73,15 +73,13 @@ namespace Win.Pizzeria
 
             usuario = TextBoxUsuario.Text;
             contraseña = TextBoxContra.Text;
-            if (usuario == "Maldonado" || usuario == "Torres" && contraseña == "mal1234" || contraseña == "1234torres")
+            if (usuario == "Maldonado" && contraseña == "mal1234" || usuario == "Torres" && contraseña == "1234torres")
             {
-                
                 FormMenu llamar = new FormMenu();
                 llamar.Show();
                 this.Hide();
-
-
             }
+
             else
             {
                 DialogResult error = new DialogResult();
@@ -89,7 +87,6 @@ namespace Win.Pizzeria
 
                 error = errormensaje.ShowDialog();
             }
-
 
         }
 

@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormBebidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBebidas.Designer.cs">
+      <DependentUpon>FormBebidas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,24 @@
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNuestrasPizzas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuestrasPizzas.Designer.cs">
+      <DependentUpon>FormNuestrasPizzas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNuestrosPostres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuestrosPostres.Designer.cs">
+      <DependentUpon>FormNuestrosPostres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPagos.Designer.cs">
+      <DependentUpon>FormPagos.cs</DependentUpon>
+    </Compile>
     <Compile Include="MessageBoxLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,8 +95,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormBebidas.resx">
+      <DependentUpon>FormBebidas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuestrasPizzas.resx">
+      <DependentUpon>FormNuestrasPizzas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuestrosPostres.resx">
+      <DependentUpon>FormNuestrosPostres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPagos.resx">
+      <DependentUpon>FormPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MessageBoxLogin.resx">
       <DependentUpon>MessageBoxLogin.cs</DependentUpon>
@@ -103,13 +142,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Login.png" />
+    <EmbeddedResource Include="Resources\Login.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Logo.png" />
+    <EmbeddedResource Include="Resources\Logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ErrorLogin.png" />
+    <EmbeddedResource Include="Resources\ErrorLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla %2813%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla %2815%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captura de pantalla %2816%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cosechas expertos en bebidas - batidos de fruta y verdura.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pizza Dibujado A Mano Ilustración Doodle.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
