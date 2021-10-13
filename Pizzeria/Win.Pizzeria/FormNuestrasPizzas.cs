@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.Pizzeria;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,14 @@ namespace Win.Pizzeria
 {
     public partial class FormNuestrasPizzas : Form
     {
+        NuestrasPizzasBL _nuestraspizzas;
+
         public FormNuestrasPizzas()
         {
             InitializeComponent();
+
+            _nuestraspizzas = new NuestrasPizzasBL();
+            menuPizzasBindingSource.DataSource = _nuestraspizzas.ObtenerPedidos();
         }
     }
 }

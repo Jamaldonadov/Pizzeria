@@ -149,5 +149,35 @@ namespace Win.Pizzeria.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pizzeria {
+            get {
+                object obj = ResourceManager.GetObject("pizzeria", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PIZZERÍA {
+            get {
+                object obj = ResourceManager.GetObject("PIZZERÍA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Todo_sobre_los_métodos_de_pago_en_Argentina___The_Shoppers {
+            get {
+                object obj = ResourceManager.GetObject("Todo sobre los métodos de pago en Argentina _ The Shoppers", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

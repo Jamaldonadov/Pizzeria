@@ -37,16 +37,20 @@
             this.pagosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.suministrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.equipoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.perecederoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tiposDePagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 534);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 662);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(470, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 13, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(627, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -56,11 +60,12 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.pedidosToolStripMenuItem,
             this.pagosToolStripMenuItem,
-            this.seguridadToolStripMenuItem});
+            this.seguridadToolStripMenuItem,
+            this.suministrosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(470, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(627, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,34 +76,37 @@
             this.nuestrosPostresToolStripMenuItem,
             this.bebidasToolStripMenuItem});
             this.pedidosToolStripMenuItem.Name = "pedidosToolStripMenuItem";
-            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.pedidosToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.pedidosToolStripMenuItem.Text = "Pedidos";
             this.pedidosToolStripMenuItem.Click += new System.EventHandler(this.pedidosToolStripMenuItem_Click);
             // 
             // nuestrasPizzasToolStripMenuItem
             // 
             this.nuestrasPizzasToolStripMenuItem.Name = "nuestrasPizzasToolStripMenuItem";
-            this.nuestrasPizzasToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.nuestrasPizzasToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.nuestrasPizzasToolStripMenuItem.Text = "Nuestras Pizzas";
             this.nuestrasPizzasToolStripMenuItem.Click += new System.EventHandler(this.nuestrasPizzasToolStripMenuItem_Click);
             // 
             // nuestrosPostresToolStripMenuItem
             // 
             this.nuestrosPostresToolStripMenuItem.Name = "nuestrosPostresToolStripMenuItem";
-            this.nuestrosPostresToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.nuestrosPostresToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.nuestrosPostresToolStripMenuItem.Text = "Nuestros Postres";
             this.nuestrosPostresToolStripMenuItem.Click += new System.EventHandler(this.nuestrosPostresToolStripMenuItem_Click);
             // 
             // bebidasToolStripMenuItem
             // 
             this.bebidasToolStripMenuItem.Name = "bebidasToolStripMenuItem";
-            this.bebidasToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.bebidasToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.bebidasToolStripMenuItem.Text = "Bebidas";
+            this.bebidasToolStripMenuItem.Click += new System.EventHandler(this.bebidasToolStripMenuItem_Click);
             // 
             // pagosToolStripMenuItem
             // 
+            this.pagosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tiposDePagoToolStripMenuItem});
             this.pagosToolStripMenuItem.Name = "pagosToolStripMenuItem";
-            this.pagosToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.pagosToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
             this.pagosToolStripMenuItem.Text = "Pagos";
             // 
             // seguridadToolStripMenuItem
@@ -106,26 +114,56 @@
             this.seguridadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loginToolStripMenuItem});
             this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
-            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
+            this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.seguridadToolStripMenuItem.Text = "Seguridad";
             // 
             // loginToolStripMenuItem
             // 
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(121, 26);
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
             // 
+            // suministrosToolStripMenuItem
+            // 
+            this.suministrosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.equipoToolStripMenuItem,
+            this.perecederoToolStripMenuItem});
+            this.suministrosToolStripMenuItem.Name = "suministrosToolStripMenuItem";
+            this.suministrosToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
+            this.suministrosToolStripMenuItem.Text = "Suministros";
+            // 
+            // equipoToolStripMenuItem
+            // 
+            this.equipoToolStripMenuItem.Name = "equipoToolStripMenuItem";
+            this.equipoToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.equipoToolStripMenuItem.Text = "Equipo";
+            this.equipoToolStripMenuItem.Click += new System.EventHandler(this.equipoToolStripMenuItem_Click);
+            // 
+            // perecederoToolStripMenuItem
+            // 
+            this.perecederoToolStripMenuItem.Name = "perecederoToolStripMenuItem";
+            this.perecederoToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.perecederoToolStripMenuItem.Text = "Perecedero";
+            this.perecederoToolStripMenuItem.Click += new System.EventHandler(this.perecederoToolStripMenuItem_Click);
+            // 
+            // tiposDePagoToolStripMenuItem
+            // 
+            this.tiposDePagoToolStripMenuItem.Name = "tiposDePagoToolStripMenuItem";
+            this.tiposDePagoToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.tiposDePagoToolStripMenuItem.Text = "Tipos de pago";
+            this.tiposDePagoToolStripMenuItem.Click += new System.EventHandler(this.tiposDePagoToolStripMenuItem_Click);
+            // 
             // FormMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 556);
+            this.ClientSize = new System.Drawing.Size(627, 684);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormMenu";
             this.Text = "Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -148,5 +186,9 @@
         private System.Windows.Forms.ToolStripMenuItem pagosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seguridadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem suministrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem equipoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem perecederoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tiposDePagoToolStripMenuItem;
     }
 }

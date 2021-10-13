@@ -57,6 +57,12 @@
     <Compile Include="FormBebidas.Designer.cs">
       <DependentUpon>FormBebidas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEquipo.Designer.cs">
+      <DependentUpon>FormEquipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,12 @@
     <Compile Include="FormPagos.Designer.cs">
       <DependentUpon>FormPagos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPerecederos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPerecederos.Designer.cs">
+      <DependentUpon>FormPerecederos.cs</DependentUpon>
+    </Compile>
     <Compile Include="MessageBoxLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +109,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormBebidas.resx">
       <DependentUpon>FormBebidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEquipo.resx">
+      <DependentUpon>FormEquipo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -113,6 +128,9 @@
     <EmbeddedResource Include="FormPagos.resx">
       <DependentUpon>FormPagos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPerecederos.resx">
+      <DependentUpon>FormPerecederos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MessageBoxLogin.resx">
       <DependentUpon>MessageBoxLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +146,9 @@
     </Compile>
     <EmbeddedResource Include="Fonts\Mark-Bold.ttf" />
     <EmbeddedResource Include="Fonts\Mark-Medium.ttf" />
+    <None Include="Properties\DataSources\BL.Pizzeria.NuestrasPizzas.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.NuestrasPizzasBL.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.SeguridadBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -164,6 +185,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Pizza Dibujado A Mano Ilustración Doodle.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PIZZERÍA.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pizzeria.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Todo sobre los métodos de pago en Argentina _ The Shoppers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL.Pizzeria\BL.Pizzeria.csproj">
+      <Project>{2ad3ef70-792b-4962-8b5a-145c9aa0c41b}</Project>
+      <Name>BL.Pizzeria</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

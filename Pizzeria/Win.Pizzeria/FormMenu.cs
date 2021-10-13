@@ -43,7 +43,37 @@ namespace Win.Pizzeria
 
         private void nuestrosPostresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-             
+            var FormNuestrosPostres = new FormNuestrosPostres();
+            FormNuestrosPostres.MdiParent = this;
+            FormNuestrosPostres.Show();
+        }
+
+        private void equipoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var FormEquipo = new FormEquipo();
+            FormEquipo.MdiParent = this;
+            FormEquipo.Show();
+        }
+
+        private void bebidasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var FormBebidas = new FormBebidas();
+            FormBebidas.MdiParent = this;
+            FormBebidas.Show();
+        }
+
+        private void tiposDePagoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var FormPagos = new FormPagos();
+            FormPagos.MdiParent = this;
+            FormPagos.Show();
+        }
+
+        private void perecederoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var FormPerecederos = new FormPerecederos();
+            FormPerecederos.MdiParent = this;
+            FormPerecederos.Show();
         }
     }
 }

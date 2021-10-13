@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.Pizzeria;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace Win.Pizzeria
 {
     public partial class FormLogin : Form
     {
+        SeguridadBL _seguridad;
         public FormLogin()
         {
             InitializeComponent();
+
+            _seguridad = new SeguridadBL();
+
 
             // CODIGO PARA  MOVER EL FORMULARIO DE LOGIN
 
@@ -73,7 +78,10 @@ namespace Win.Pizzeria
 
             usuario = TextBoxUsuario.Text;
             contraseña = TextBoxContra.Text;
-            if (usuario == "Maldonado" && contraseña == "mal1234" || usuario == "Torres" && contraseña == "1234torres")
+
+            var resultado = _seguridad.Autorizar(usuario, contraseña);
+
+            if (resultado == true)
             {
                 FormMenu llamar = new FormMenu();
                 llamar.Show();
