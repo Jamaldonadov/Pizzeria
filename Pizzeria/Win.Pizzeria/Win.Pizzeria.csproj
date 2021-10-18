@@ -197,7 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BL.Pizzeria\BL.Pizzeria.csproj">
-      <Project>{2ad3ef70-792b-4962-8b5a-145c9aa0c41b}</Project>
+      <Project>{EBDA790B-04C6-4BC1-BA28-E88B5551449B}</Project>
       <Name>BL.Pizzeria</Name>
     </ProjectReference>
   </ItemGroup>

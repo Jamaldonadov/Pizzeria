@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2AD3EF70-792B-4962-8B5A-145C9AA0C41B}</ProjectGuid>
+    <ProjectGuid>{EBDA790B-04C6-4BC1-BA28-E88B5551449B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BL.Pizzeria</RootNamespace>

@@ -20,7 +20,6 @@ namespace Win.Pizzeria
 
             _seguridad = new SeguridadBL();
 
-
             // CODIGO PARA  MOVER EL FORMULARIO DE LOGIN
 
             this.FormBorderStyle = FormBorderStyle.None;
@@ -78,8 +77,7 @@ namespace Win.Pizzeria
 
             usuario = TextBoxUsuario.Text;
             contraseña = TextBoxContra.Text;
-
-            var resultado = _seguridad.Autorizar(usuario, contraseña);
+            var resultado =  _seguridad.Autorizar(usuario, contraseña);
 
             if (resultado == true)
             {
