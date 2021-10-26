@@ -33,6 +33,7 @@ namespace Win.Pizzeria
             {
                 ordenBindingSource.ResetBindings(false);
                 DeshabilitarHabilitarBotones(true);
+                MessageBox.Show("Pedido Guardado con exito");
             }
             else
             {
@@ -96,7 +97,7 @@ namespace Win.Pizzeria
             Eliminar(0); 
         }
 
-        private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e)
+        private void pedidoTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }

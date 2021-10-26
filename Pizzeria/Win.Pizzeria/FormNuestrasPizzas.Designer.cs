@@ -211,7 +211,6 @@
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 24);
             this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            this.bindingNavigatorMoveLastItem.Click += new System.EventHandler(this.bindingNavigatorMoveLastItem_Click);
             // 
             // bindingNavigatorSeparator2
             // 
@@ -277,6 +276,7 @@
             this.pedidoTextBox.ReadOnly = true;
             this.pedidoTextBox.Size = new System.Drawing.Size(144, 20);
             this.pedidoTextBox.TabIndex = 5;
+            this.pedidoTextBox.TextChanged += new System.EventHandler(this.pedidoTextBox_TextChanged);
             // 
             // precioTextBox
             // 
@@ -300,7 +300,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 144);
+            this.ClientSize = new System.Drawing.Size(502, 522);
             this.Controls.Add(disponibleLabel);
             this.Controls.Add(this.disponibleCheckBox);
             this.Controls.Add(pedidoLabel);

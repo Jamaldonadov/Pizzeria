@@ -1,59 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BL.Pizzeria
 {
-    public class NuestrasPizzasBL
-    {
-        public BindingList<NuestrasPizzas> Orden { get; set; }
-
-        public NuestrasPizzasBL()
+    
+        public class NuestrasPizzasBL
         {
-            Orden = new BindingList<NuestrasPizzas>();
+            Contexto _contexto;
+            public BindingList<NuestrasPizzas> Orden { get; set; }
 
-            var nuestraspizzas1 = new NuestrasPizzas();
-            nuestraspizzas1.Pedido = 1;
-            nuestraspizzas1.Tipo = "Mozzarela";
-            nuestraspizzas1.Precio = 100;
-            nuestraspizzas1.Disponible = true;
+            public NuestrasPizzasBL()
+            {
+                _contexto = new Contexto();
+                Orden = new BindingList<NuestrasPizzas>();
 
-            Orden.Add(nuestraspizzas1);
 
-            var nuestraspizzas2 = new NuestrasPizzas();
-            nuestraspizzas2.Pedido = 2;
-            nuestraspizzas2.Tipo = "4 Estaciones";
-            nuestraspizzas2.Precio = 120;
-            nuestraspizzas2.Disponible = true;
+            }
 
-            Orden.Add(nuestraspizzas2);
+            public BindingList<NuestrasPizzas> Pedido()
+            {
+                _contexto.Nuestrapizzas.Load();
+                Orden = _contexto.Nuestrapizzas.Local.ToBindingList();
 
-            var nuestraspizzas3 = new NuestrasPizzas();
-            nuestraspizzas3.Pedido = 3;
-            nuestraspizzas3.Tipo = "Hawaiillana";
-            nuestraspizzas3.Precio = 150;
-            nuestraspizzas3.Disponible = true;
+                return Orden;
+            }
 
-            Orden.Add(nuestraspizzas3);
-
-            var nuestraspizzas4 = new NuestrasPizzas();
-            nuestraspizzas4.Pedido = 4;
-            nuestraspizzas4.Tipo = "4 Quesos";
-            nuestraspizzas4.Precio = 170;
-            nuestraspizzas4.Disponible = true;
-
-            Orden.Add(nuestraspizzas4);
-        }
-
-        public BindingList<NuestrasPizzas> Pedido()
-        {
-            return Orden;
-        }
-
-        public Resultado GuardarNuestrasPizzas(NuestrasPizzas nuestraspizzas)
+            public Resultado GuardarNuestrasPizzas(NuestrasPizzas nuestraspizzas)
         {
             var resultado = validar(nuestraspizzas);
             if (resultado.Exitoso == false)
@@ -61,10 +40,7 @@ namespace BL.Pizzeria
                 return resultado;
             }
 
-            if (nuestraspizzas.Pedido == 0)
-            {
-                nuestraspizzas.Pedido = Orden.Max(item => item.Pedido) + 1;
-            }
+            _contexto.SaveChanges();
 
             resultado.Exitoso = true;
             return resultado;
@@ -83,6 +59,7 @@ namespace BL.Pizzeria
                 if (nuestraspizzas.Pedido == pedido)
                 {
                     Orden.Remove(nuestraspizzas);
+                    _contexto.SaveChanges();
                     return true;
                 }
             }
@@ -111,8 +88,11 @@ namespace BL.Pizzeria
         }
     }
 
+   
     public class NuestrasPizzas
     {
+       
+        [Key]
         public int Pedido { get; set; }
         public string Tipo  { get; set; }
         public double Precio { get; set; }
