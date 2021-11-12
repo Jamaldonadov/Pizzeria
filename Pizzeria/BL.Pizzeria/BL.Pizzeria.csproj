@@ -50,13 +50,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexto.cs" />
+    <Compile Include="DatosdeInicio.cs" />
     <Compile Include="NuestrasPizzasBL.cs" />
     <Compile Include="SeguridadBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoBL.cs" />
+    <Compile Include="TipopizzaBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

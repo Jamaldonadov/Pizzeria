@@ -156,9 +156,17 @@
     <EmbeddedResource Include="Fonts\Mark-Bold.ttf" />
     <EmbeddedResource Include="Fonts\Mark-Medium.ttf" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BL.Pizzeria.Contexto.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.DatosdeInicio.datasource" />
     <None Include="Properties\DataSources\BL.Pizzeria.NuestrasPizzas.datasource" />
     <None Include="Properties\DataSources\BL.Pizzeria.NuestrasPizzasBL.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.Resultado.datasource" />
     <None Include="Properties\DataSources\BL.Pizzeria.SeguridadBL.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.Tipo.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.TipoBL.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.TipopizzaBL.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.Tipopizzas.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.Usuario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

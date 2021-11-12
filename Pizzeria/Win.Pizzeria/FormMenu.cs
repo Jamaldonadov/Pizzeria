@@ -15,6 +15,9 @@ namespace Win.Pizzeria
         public FormMenu()
         {
             InitializeComponent();
+           
+            
+            IsMdiContainer = true;
         }
 
         private void FormMenu_Load(object sender, EventArgs e)
@@ -35,9 +38,9 @@ namespace Win.Pizzeria
 
         private void nuestrasPizzasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var FormNuestrasPizzas = new FormNuestrasPizzas();
-            FormNuestrasPizzas.MdiParent = this;
-            FormNuestrasPizzas.Show();
+            FormNuestrasPizzas  formnuestrapizza = new FormNuestrasPizzas();
+            formnuestrapizza.MdiParent = this;
+           formnuestrapizza.Show();
 
         }
 

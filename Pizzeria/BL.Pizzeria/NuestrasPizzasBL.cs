@@ -32,6 +32,16 @@ namespace BL.Pizzeria
                 return Orden;
             }
 
+        public void CancelarCambios()
+        {
+            foreach (var item in _contexto.ChangeTracker.Entries())
+            {
+                item.State = EntityState.Unchanged;
+                item.Reload();
+            }
+
+        }
+
             public Resultado GuardarNuestrasPizzas(NuestrasPizzas nuestraspizzas)
         {
             var resultado = validar(nuestraspizzas);
@@ -72,7 +82,7 @@ namespace BL.Pizzeria
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
-            if (string.IsNullOrEmpty(nuestraspizzas.Tipo) == true)
+            if (string.IsNullOrEmpty(nuestraspizzas.Descripcion) == true)
             {
                 resultado.Mensaje = "Ingrese un tipo de pizza";
                 resultado.Exitoso = false;
@@ -84,19 +94,44 @@ namespace BL.Pizzeria
                 resultado.Mensaje = "El Precio debe ser mayor que cero";
                 resultado.Exitoso = false;
             }
+
+            if (nuestraspizzas.TipopizzaId == 0 )
+            {
+                resultado.Mensaje = "Seleccione un tipo de pizza";
+                resultado.Exitoso = false;
+            }
+
+
+            if (nuestraspizzas.TipoId == 0)
+            {
+                resultado.Mensaje = "Seleccione un tamaño de pizza";
+                resultado.Exitoso = false;
+            }
             return resultado;
         }
     }
 
-   
+
     public class NuestrasPizzas
     {
-       
+
         [Key]
         public int Pedido { get; set; }
-        public string Tipo  { get; set; }
+        public string Descripcion { get; set; }
         public double Precio { get; set; }
+        public int TipopizzaId { get; set; }
+        public Tipopizzas tipopizza { get; set; }
+        public int TipoId { get; set; }
+        public Tipo Tipo { get; set; }
         public bool Disponible { get; set; }
+        public byte[] Foto { get; set; }
+
+
+
+        public NuestrasPizzas()
+        {
+            Disponible = true;
+        }
     }
 
     public class Resultado

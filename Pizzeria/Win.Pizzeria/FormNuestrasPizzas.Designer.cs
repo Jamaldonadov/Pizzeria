@@ -32,9 +32,9 @@
             System.Windows.Forms.Label disponibleLabel;
             System.Windows.Forms.Label pedidoLabel;
             System.Windows.Forms.Label precioLabel;
-            System.Windows.Forms.Label tipoLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuestrasPizzas));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            System.Windows.Forms.Label tipopizzaIdLabel;
+            System.Windows.Forms.Label tipoIdLabel;
             this.ordenBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.ordenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -53,21 +53,31 @@
             this.disponibleCheckBox = new System.Windows.Forms.CheckBox();
             this.pedidoTextBox = new System.Windows.Forms.TextBox();
             this.precioTextBox = new System.Windows.Forms.TextBox();
-            this.tipoTextBox = new System.Windows.Forms.TextBox();
+            this.fotoPictureBox = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.listaTiposBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listaTipospizzasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipopizzaIdComboBox = new System.Windows.Forms.ComboBox();
+            this.tipoIdComboBox = new System.Windows.Forms.ComboBox();
             disponibleLabel = new System.Windows.Forms.Label();
             pedidoLabel = new System.Windows.Forms.Label();
             precioLabel = new System.Windows.Forms.Label();
-            tipoLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            tipopizzaIdLabel = new System.Windows.Forms.Label();
+            tipoIdLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ordenBindingNavigator)).BeginInit();
             this.ordenBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ordenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaTiposBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaTipospizzasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // disponibleLabel
             // 
             disponibleLabel.AutoSize = true;
-            disponibleLabel.Location = new System.Drawing.Point(112, 127);
+            disponibleLabel.Location = new System.Drawing.Point(93, 244);
             disponibleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             disponibleLabel.Name = "disponibleLabel";
             disponibleLabel.Size = new System.Drawing.Size(59, 13);
@@ -77,7 +87,7 @@
             // pedidoLabel
             // 
             pedidoLabel.AutoSize = true;
-            pedidoLabel.Location = new System.Drawing.Point(112, 57);
+            pedidoLabel.Location = new System.Drawing.Point(93, 103);
             pedidoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             pedidoLabel.Name = "pedidoLabel";
             pedidoLabel.Size = new System.Drawing.Size(43, 13);
@@ -87,32 +97,12 @@
             // precioLabel
             // 
             precioLabel.AutoSize = true;
-            precioLabel.Location = new System.Drawing.Point(112, 80);
+            precioLabel.Location = new System.Drawing.Point(93, 210);
             precioLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             precioLabel.Name = "precioLabel";
             precioLabel.Size = new System.Drawing.Size(40, 13);
             precioLabel.TabIndex = 6;
             precioLabel.Text = "Precio:";
-            // 
-            // tipoLabel
-            // 
-            tipoLabel.AutoSize = true;
-            tipoLabel.Location = new System.Drawing.Point(112, 102);
-            tipoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            tipoLabel.Name = "tipoLabel";
-            tipoLabel.Size = new System.Drawing.Size(31, 13);
-            tipoLabel.TabIndex = 8;
-            tipoLabel.Text = "Tipo:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Win.Pizzeria.Properties.Resources.Captura_de_pantalla__13_;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 147);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(480, 366);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // ordenBindingNavigator
             // 
@@ -142,7 +132,7 @@
             this.ordenBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.ordenBindingNavigator.Name = "ordenBindingNavigator";
             this.ordenBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.ordenBindingNavigator.Size = new System.Drawing.Size(502, 27);
+            this.ordenBindingNavigator.Size = new System.Drawing.Size(708, 27);
             this.ordenBindingNavigator.TabIndex = 1;
             this.ordenBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -260,8 +250,8 @@
             // disponibleCheckBox
             // 
             this.disponibleCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.ordenBindingSource, "Disponible", true));
-            this.disponibleCheckBox.Location = new System.Drawing.Point(175, 123);
-            this.disponibleCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.disponibleCheckBox.Location = new System.Drawing.Point(156, 241);
+            this.disponibleCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.disponibleCheckBox.Name = "disponibleCheckBox";
             this.disponibleCheckBox.Size = new System.Drawing.Size(78, 20);
             this.disponibleCheckBox.TabIndex = 3;
@@ -270,63 +260,149 @@
             // pedidoTextBox
             // 
             this.pedidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ordenBindingSource, "Pedido", true));
-            this.pedidoTextBox.Location = new System.Drawing.Point(175, 54);
-            this.pedidoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pedidoTextBox.Location = new System.Drawing.Point(166, 100);
+            this.pedidoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.pedidoTextBox.Name = "pedidoTextBox";
             this.pedidoTextBox.ReadOnly = true;
-            this.pedidoTextBox.Size = new System.Drawing.Size(144, 20);
+            this.pedidoTextBox.Size = new System.Drawing.Size(212, 20);
             this.pedidoTextBox.TabIndex = 5;
             this.pedidoTextBox.TextChanged += new System.EventHandler(this.pedidoTextBox_TextChanged);
             // 
             // precioTextBox
             // 
             this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ordenBindingSource, "Precio", true));
-            this.precioTextBox.Location = new System.Drawing.Point(175, 77);
-            this.precioTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.precioTextBox.Location = new System.Drawing.Point(166, 203);
+            this.precioTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.precioTextBox.Name = "precioTextBox";
-            this.precioTextBox.Size = new System.Drawing.Size(144, 20);
+            this.precioTextBox.Size = new System.Drawing.Size(212, 20);
             this.precioTextBox.TabIndex = 7;
+            this.precioTextBox.TextChanged += new System.EventHandler(this.precioTextBox_TextChanged);
             // 
-            // tipoTextBox
+            // fotoPictureBox
             // 
-            this.tipoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ordenBindingSource, "Tipo", true));
-            this.tipoTextBox.Location = new System.Drawing.Point(175, 100);
-            this.tipoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tipoTextBox.Name = "tipoTextBox";
-            this.tipoTextBox.Size = new System.Drawing.Size(144, 20);
-            this.tipoTextBox.TabIndex = 9;
+            this.fotoPictureBox.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.fotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.ordenBindingSource, "Foto", true, System.Windows.Forms.DataSourceUpdateMode.Never));
+            this.fotoPictureBox.Location = new System.Drawing.Point(403, 54);
+            this.fotoPictureBox.Name = "fotoPictureBox";
+            this.fotoPictureBox.Size = new System.Drawing.Size(293, 206);
+            this.fotoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.fotoPictureBox.TabIndex = 10;
+            this.fotoPictureBox.TabStop = false;
+            this.fotoPictureBox.Click += new System.EventHandler(this.fotoPictureBox_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(403, 266);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(137, 35);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Agregar Imagen";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(558, 266);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(138, 35);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Remover Imagen";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "jpg, png | *.jpg *.png";
+            // 
+            // listaTiposBindingSource
+            // 
+            this.listaTiposBindingSource.DataSource = typeof(BL.Pizzeria.Tipo);
+            // 
+            // listaTipospizzasBindingSource
+            // 
+            this.listaTipospizzasBindingSource.DataSource = typeof(BL.Pizzeria.Tipopizzas);
+            // 
+            // tipopizzaIdLabel
+            // 
+            tipopizzaIdLabel.AutoSize = true;
+            tipopizzaIdLabel.Location = new System.Drawing.Point(93, 171);
+            tipopizzaIdLabel.Name = "tipopizzaIdLabel";
+            tipopizzaIdLabel.Size = new System.Drawing.Size(31, 13);
+            tipopizzaIdLabel.TabIndex = 13;
+            tipopizzaIdLabel.Text = "Tipo:";
+            // 
+            // tipopizzaIdComboBox
+            // 
+            this.tipopizzaIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ordenBindingSource, "TipopizzaId", true));
+            this.tipopizzaIdComboBox.DataSource = this.listaTipospizzasBindingSource;
+            this.tipopizzaIdComboBox.DisplayMember = "Descripcion";
+            this.tipopizzaIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tipopizzaIdComboBox.FormattingEnabled = true;
+            this.tipopizzaIdComboBox.Location = new System.Drawing.Point(166, 163);
+            this.tipopizzaIdComboBox.Name = "tipopizzaIdComboBox";
+            this.tipopizzaIdComboBox.Size = new System.Drawing.Size(212, 21);
+            this.tipopizzaIdComboBox.TabIndex = 14;
+            this.tipopizzaIdComboBox.ValueMember = "Id";
+            // 
+            // tipoIdLabel
+            // 
+            tipoIdLabel.AutoSize = true;
+            tipoIdLabel.Location = new System.Drawing.Point(93, 139);
+            tipoIdLabel.Name = "tipoIdLabel";
+            tipoIdLabel.Size = new System.Drawing.Size(49, 13);
+            tipoIdLabel.TabIndex = 14;
+            tipoIdLabel.Text = "Tamaño:";
+            // 
+            // tipoIdComboBox
+            // 
+            this.tipoIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.ordenBindingSource, "TipoId", true));
+            this.tipoIdComboBox.DataSource = this.listaTiposBindingSource;
+            this.tipoIdComboBox.DisplayMember = "Descripcion";
+            this.tipoIdComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tipoIdComboBox.FormattingEnabled = true;
+            this.tipoIdComboBox.Location = new System.Drawing.Point(166, 136);
+            this.tipoIdComboBox.Name = "tipoIdComboBox";
+            this.tipoIdComboBox.Size = new System.Drawing.Size(212, 21);
+            this.tipoIdComboBox.TabIndex = 15;
+            this.tipoIdComboBox.ValueMember = "Id";
             // 
             // FormNuestrasPizzas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 522);
+            this.ClientSize = new System.Drawing.Size(708, 703);
+            this.Controls.Add(tipoIdLabel);
+            this.Controls.Add(this.tipoIdComboBox);
+            this.Controls.Add(tipopizzaIdLabel);
+            this.Controls.Add(this.tipopizzaIdComboBox);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.fotoPictureBox);
             this.Controls.Add(disponibleLabel);
             this.Controls.Add(this.disponibleCheckBox);
             this.Controls.Add(pedidoLabel);
             this.Controls.Add(this.pedidoTextBox);
             this.Controls.Add(precioLabel);
             this.Controls.Add(this.precioTextBox);
-            this.Controls.Add(tipoLabel);
-            this.Controls.Add(this.tipoTextBox);
             this.Controls.Add(this.ordenBindingNavigator);
-            this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormNuestrasPizzas";
             this.Text = "NuestrasPizzas";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.FormNuestrasPizzas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ordenBindingNavigator)).EndInit();
             this.ordenBindingNavigator.ResumeLayout(false);
             this.ordenBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ordenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fotoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaTiposBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaTipospizzasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.BindingSource ordenBindingSource;
         private System.Windows.Forms.BindingNavigator ordenBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
@@ -344,7 +420,14 @@
         private System.Windows.Forms.CheckBox disponibleCheckBox;
         private System.Windows.Forms.TextBox pedidoTextBox;
         private System.Windows.Forms.TextBox precioTextBox;
-        private System.Windows.Forms.TextBox tipoTextBox;
         private System.Windows.Forms.ToolStripButton toolStripButtonCancelar;
+        private System.Windows.Forms.PictureBox fotoPictureBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.BindingSource listaTiposBindingSource;
+        private System.Windows.Forms.BindingSource listaTipospizzasBindingSource;
+        private System.Windows.Forms.ComboBox tipopizzaIdComboBox;
+        private System.Windows.Forms.ComboBox tipoIdComboBox;
     }
 }

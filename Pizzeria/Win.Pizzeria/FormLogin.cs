@@ -77,6 +77,8 @@ namespace Win.Pizzeria
 
             usuario = TextBoxUsuario.Text;
             contraseña = TextBoxContra.Text;
+
+            Application.DoEvents();
             var resultado =  _seguridad.Autorizar(usuario, contraseña);
 
             if (resultado == true)

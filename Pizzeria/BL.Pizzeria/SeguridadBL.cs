@@ -8,21 +8,36 @@ namespace BL.Pizzeria
 {
     public class SeguridadBL
     {
-        public bool Autorizar(string usuario, string contraseña)
+        Contexto _contexto;
+
+        public SeguridadBL()
         {
-            if (usuario == "Maldonado" && contraseña == "mal1234" || usuario == "Torres" && contraseña == "1234torres" || usuario == "Panchame" && contraseña == "1234panchame")
-             {
-                return true;
-            } else
-            {
-                if (usuario == "user" && contraseña == "user456"  )
+            _contexto = new Contexto();
+        }
+
+        public bool Autorizar(string usuario, string Contrasena)
+        {
+            var Usuarios = _contexto.Usuarios.ToList();
+            foreach (var usuarioDB in Usuarios)
                     {
 
-                    return true;
-                }
+                         if ( usuario == usuarioDB.nombre &&  Contrasena == usuarioDB.Contrasena)
+                         { 
+                             return true;
+                          }
             }
+
+           
 
             return false;
         }
+    }
+
+    public class Usuario
+    {
+
+        public int Id { get; set; }
+        public string nombre  { get; set; } 
+        public string Contrasena { get; set; }
     }
 }
