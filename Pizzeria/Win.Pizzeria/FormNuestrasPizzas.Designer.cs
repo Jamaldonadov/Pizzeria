@@ -32,9 +32,9 @@
             System.Windows.Forms.Label disponibleLabel;
             System.Windows.Forms.Label pedidoLabel;
             System.Windows.Forms.Label precioLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuestrasPizzas));
             System.Windows.Forms.Label tipopizzaIdLabel;
             System.Windows.Forms.Label tipoIdLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuestrasPizzas));
             this.ordenBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.ordenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -103,6 +103,24 @@
             precioLabel.Size = new System.Drawing.Size(40, 13);
             precioLabel.TabIndex = 6;
             precioLabel.Text = "Precio:";
+            // 
+            // tipopizzaIdLabel
+            // 
+            tipopizzaIdLabel.AutoSize = true;
+            tipopizzaIdLabel.Location = new System.Drawing.Point(93, 171);
+            tipopizzaIdLabel.Name = "tipopizzaIdLabel";
+            tipopizzaIdLabel.Size = new System.Drawing.Size(31, 13);
+            tipopizzaIdLabel.TabIndex = 13;
+            tipopizzaIdLabel.Text = "Tipo:";
+            // 
+            // tipoIdLabel
+            // 
+            tipoIdLabel.AutoSize = true;
+            tipoIdLabel.Location = new System.Drawing.Point(93, 139);
+            tipoIdLabel.Name = "tipoIdLabel";
+            tipoIdLabel.Size = new System.Drawing.Size(49, 13);
+            tipoIdLabel.TabIndex = 14;
+            tipoIdLabel.Text = "Tamaño:";
             // 
             // ordenBindingNavigator
             // 
@@ -313,7 +331,7 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "jpg, png | *.jpg *.png";
+            this.openFileDialog1.Filter = "jpg, png |*.jpg; *.png";
             // 
             // listaTiposBindingSource
             // 
@@ -322,15 +340,6 @@
             // listaTipospizzasBindingSource
             // 
             this.listaTipospizzasBindingSource.DataSource = typeof(BL.Pizzeria.Tipopizzas);
-            // 
-            // tipopizzaIdLabel
-            // 
-            tipopizzaIdLabel.AutoSize = true;
-            tipopizzaIdLabel.Location = new System.Drawing.Point(93, 171);
-            tipopizzaIdLabel.Name = "tipopizzaIdLabel";
-            tipopizzaIdLabel.Size = new System.Drawing.Size(31, 13);
-            tipopizzaIdLabel.TabIndex = 13;
-            tipopizzaIdLabel.Text = "Tipo:";
             // 
             // tipopizzaIdComboBox
             // 
@@ -344,15 +353,6 @@
             this.tipopizzaIdComboBox.Size = new System.Drawing.Size(212, 21);
             this.tipopizzaIdComboBox.TabIndex = 14;
             this.tipopizzaIdComboBox.ValueMember = "Id";
-            // 
-            // tipoIdLabel
-            // 
-            tipoIdLabel.AutoSize = true;
-            tipoIdLabel.Location = new System.Drawing.Point(93, 139);
-            tipoIdLabel.Name = "tipoIdLabel";
-            tipoIdLabel.Size = new System.Drawing.Size(49, 13);
-            tipoIdLabel.TabIndex = 14;
-            tipoIdLabel.Text = "Tamaño:";
             // 
             // tipoIdComboBox
             // 
