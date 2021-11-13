@@ -82,12 +82,6 @@ namespace BL.Pizzeria
             var resultado = new Resultado();
             resultado.Exitoso = true;
 
-            if (string.IsNullOrEmpty(nuestraspizzas.Descripcion) == true)
-            {
-                resultado.Mensaje = "Ingrese un tipo de pizza";
-                resultado.Exitoso = false;
-            }
-
 
             if (nuestraspizzas.Precio < 0)
             {
