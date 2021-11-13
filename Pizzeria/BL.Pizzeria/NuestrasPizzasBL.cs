@@ -66,7 +66,7 @@ namespace BL.Pizzeria
         {
             foreach (var nuestraspizzas in Orden)
             {
-                if (nuestraspizzas.Pedido == pedido)
+                if (nuestraspizzas.pedido == pedido)
                 {
                     Orden.Remove(nuestraspizzas);
                     _contexto.SaveChanges();
@@ -81,6 +81,20 @@ namespace BL.Pizzeria
         {
             var resultado = new Resultado();
             resultado.Exitoso = true;
+
+            if (nuestraspizzas == null)
+            {
+                resultado.Mensaje = "Agruegue una Pizza";
+                resultado.Exitoso = false;
+
+                return resultado;
+            }
+
+            if (string.IsNullOrEmpty(nuestraspizzas.Descripcion) == true)
+            {
+                resultado.Mensaje = "Ingrese una Descripcion";
+                resultado.Exitoso = false;
+            }
 
 
             if (nuestraspizzas.Precio < 0)
@@ -101,6 +115,13 @@ namespace BL.Pizzeria
                 resultado.Mensaje = "Seleccione un tamaño de pizza";
                 resultado.Exitoso = false;
             }
+
+            if (nuestraspizzas.exitencia== 0)
+            {
+                resultado.Mensaje = "Seleccione la cantidad de pizza que hay en exitencia";
+                resultado.Exitoso = false;
+            }
+
             return resultado;
         }
     }
@@ -109,14 +130,15 @@ namespace BL.Pizzeria
     public class NuestrasPizzas
     {
 
-        [Key]
-        public int Pedido { get; set; }
+        public int Id { get; set; }
+        public int pedido { get; set; }
         public string Descripcion { get; set; }
         public double Precio { get; set; }
         public int TipopizzaId { get; set; }
         public Tipopizzas tipopizza { get; set; }
         public int TipoId { get; set; }
         public Tipo Tipo { get; set; }
+        public int exitencia { get; set; }
         public bool Disponible { get; set; }
         public byte[] Foto { get; set; }
 

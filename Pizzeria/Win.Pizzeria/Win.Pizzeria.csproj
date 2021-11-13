@@ -66,11 +66,23 @@
     <Compile Include="FormBebidas.Designer.cs">
       <DependentUpon>FormBebidas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClientes.Designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEquipo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormEquipo.Designer.cs">
       <DependentUpon>FormEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFactura.Designer.cs">
+      <DependentUpon>FormFactura.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -119,8 +131,14 @@
     <EmbeddedResource Include="FormBebidas.resx">
       <DependentUpon>FormBebidas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormEquipo.resx">
       <DependentUpon>FormEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFactura.resx">
+      <DependentUpon>FormFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -156,8 +174,13 @@
     <EmbeddedResource Include="Fonts\Mark-Bold.ttf" />
     <EmbeddedResource Include="Fonts\Mark-Medium.ttf" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\BL.Pizzeria.Cliente.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.ClienteBL.datasource" />
     <None Include="Properties\DataSources\BL.Pizzeria.Contexto.datasource" />
     <None Include="Properties\DataSources\BL.Pizzeria.DatosdeInicio.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.Factura.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.FacturaBL.datasource" />
+    <None Include="Properties\DataSources\BL.Pizzeria.FacturaDetalle.datasource" />
     <None Include="Properties\DataSources\BL.Pizzeria.NuestrasPizzas.datasource" />
     <None Include="Properties\DataSources\BL.Pizzeria.NuestrasPizzasBL.datasource" />
     <None Include="Properties\DataSources\BL.Pizzeria.Resultado.datasource" />

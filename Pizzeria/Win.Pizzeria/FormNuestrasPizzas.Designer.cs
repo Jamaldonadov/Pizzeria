@@ -34,7 +34,9 @@
             System.Windows.Forms.Label precioLabel;
             System.Windows.Forms.Label tipopizzaIdLabel;
             System.Windows.Forms.Label tipoIdLabel;
+            System.Windows.Forms.Label descripcionLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuestrasPizzas));
+            System.Windows.Forms.Label exitenciaLabel;
             this.ordenBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.ordenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -61,11 +63,15 @@
             this.listaTipospizzasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipopizzaIdComboBox = new System.Windows.Forms.ComboBox();
             this.tipoIdComboBox = new System.Windows.Forms.ComboBox();
+            this.descripcionTextBox = new System.Windows.Forms.TextBox();
+            this.exitenciaTextBox = new System.Windows.Forms.TextBox();
             disponibleLabel = new System.Windows.Forms.Label();
             pedidoLabel = new System.Windows.Forms.Label();
             precioLabel = new System.Windows.Forms.Label();
             tipopizzaIdLabel = new System.Windows.Forms.Label();
             tipoIdLabel = new System.Windows.Forms.Label();
+            descripcionLabel = new System.Windows.Forms.Label();
+            exitenciaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ordenBindingNavigator)).BeginInit();
             this.ordenBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ordenBindingSource)).BeginInit();
@@ -77,7 +83,7 @@
             // disponibleLabel
             // 
             disponibleLabel.AutoSize = true;
-            disponibleLabel.Location = new System.Drawing.Point(93, 244);
+            disponibleLabel.Location = new System.Drawing.Point(93, 288);
             disponibleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             disponibleLabel.Name = "disponibleLabel";
             disponibleLabel.Size = new System.Drawing.Size(59, 13);
@@ -122,6 +128,16 @@
             tipoIdLabel.TabIndex = 14;
             tipoIdLabel.Text = "Tamaño:";
             // 
+            // descripcionLabel
+            // 
+            descripcionLabel.AutoSize = true;
+            descripcionLabel.Location = new System.Drawing.Point(93, 235);
+            descripcionLabel.Name = "descripcionLabel";
+            descripcionLabel.Size = new System.Drawing.Size(66, 13);
+            descripcionLabel.TabIndex = 15;
+            descripcionLabel.Text = "Descripcion:";
+            descripcionLabel.Click += new System.EventHandler(this.descripcionLabel_Click);
+            // 
             // ordenBindingNavigator
             // 
             this.ordenBindingNavigator.AddNewItem = null;
@@ -150,7 +166,7 @@
             this.ordenBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.ordenBindingNavigator.Name = "ordenBindingNavigator";
             this.ordenBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.ordenBindingNavigator.Size = new System.Drawing.Size(708, 27);
+            this.ordenBindingNavigator.Size = new System.Drawing.Size(716, 27);
             this.ordenBindingNavigator.TabIndex = 1;
             this.ordenBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -268,7 +284,7 @@
             // disponibleCheckBox
             // 
             this.disponibleCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.ordenBindingSource, "Disponible", true));
-            this.disponibleCheckBox.Location = new System.Drawing.Point(156, 241);
+            this.disponibleCheckBox.Location = new System.Drawing.Point(156, 285);
             this.disponibleCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.disponibleCheckBox.Name = "disponibleCheckBox";
             this.disponibleCheckBox.Size = new System.Drawing.Size(78, 20);
@@ -331,7 +347,7 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "jpg, png |*.jpg; *.png";
+            this.openFileDialog1.Filter = "jpg, png | *.jpg *.png";
             // 
             // listaTiposBindingSource
             // 
@@ -367,11 +383,40 @@
             this.tipoIdComboBox.TabIndex = 15;
             this.tipoIdComboBox.ValueMember = "Id";
             // 
+            // descripcionTextBox
+            // 
+            this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ordenBindingSource, "Descripcion", true));
+            this.descripcionTextBox.Location = new System.Drawing.Point(166, 232);
+            this.descripcionTextBox.Name = "descripcionTextBox";
+            this.descripcionTextBox.Size = new System.Drawing.Size(212, 20);
+            this.descripcionTextBox.TabIndex = 16;
+            // 
+            // exitenciaLabel
+            // 
+            exitenciaLabel.AutoSize = true;
+            exitenciaLabel.Location = new System.Drawing.Point(98, 263);
+            exitenciaLabel.Name = "exitenciaLabel";
+            exitenciaLabel.Size = new System.Drawing.Size(53, 13);
+            exitenciaLabel.TabIndex = 16;
+            exitenciaLabel.Text = "Exitencia:";
+            // 
+            // exitenciaTextBox
+            // 
+            this.exitenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ordenBindingSource, "exitencia", true));
+            this.exitenciaTextBox.Location = new System.Drawing.Point(166, 260);
+            this.exitenciaTextBox.Name = "exitenciaTextBox";
+            this.exitenciaTextBox.Size = new System.Drawing.Size(212, 20);
+            this.exitenciaTextBox.TabIndex = 17;
+            // 
             // FormNuestrasPizzas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 703);
+            this.ClientSize = new System.Drawing.Size(716, 703);
+            this.Controls.Add(exitenciaLabel);
+            this.Controls.Add(this.exitenciaTextBox);
+            this.Controls.Add(descripcionLabel);
+            this.Controls.Add(this.descripcionTextBox);
             this.Controls.Add(tipoIdLabel);
             this.Controls.Add(this.tipoIdComboBox);
             this.Controls.Add(tipopizzaIdLabel);
@@ -429,5 +474,7 @@
         private System.Windows.Forms.BindingSource listaTipospizzasBindingSource;
         private System.Windows.Forms.ComboBox tipopizzaIdComboBox;
         private System.Windows.Forms.ComboBox tipoIdComboBox;
+        private System.Windows.Forms.TextBox descripcionTextBox;
+        private System.Windows.Forms.TextBox exitenciaTextBox;
     }
 }

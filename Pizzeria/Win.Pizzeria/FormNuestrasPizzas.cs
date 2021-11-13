@@ -17,6 +17,7 @@ namespace Win.Pizzeria
         NuestrasPizzasBL _nuestraspizzas;
         TipopizzaBL _tipopizzas;
         TipoBL _tipo;
+        
 
         public FormNuestrasPizzas()
         {
@@ -178,6 +179,11 @@ namespace Win.Pizzeria
         }
 
         private void FormNuestrasPizzas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void descripcionLabel_Click(object sender, EventArgs e)
         {
 
         }
