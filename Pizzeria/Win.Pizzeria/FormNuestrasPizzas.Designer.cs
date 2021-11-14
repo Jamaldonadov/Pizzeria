@@ -35,8 +35,8 @@
             System.Windows.Forms.Label tipopizzaIdLabel;
             System.Windows.Forms.Label tipoIdLabel;
             System.Windows.Forms.Label descripcionLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuestrasPizzas));
             System.Windows.Forms.Label exitenciaLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuestrasPizzas));
             this.ordenBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.ordenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -138,6 +138,15 @@
             descripcionLabel.Text = "Descripcion:";
             descripcionLabel.Click += new System.EventHandler(this.descripcionLabel_Click);
             // 
+            // exitenciaLabel
+            // 
+            exitenciaLabel.AutoSize = true;
+            exitenciaLabel.Location = new System.Drawing.Point(98, 263);
+            exitenciaLabel.Name = "exitenciaLabel";
+            exitenciaLabel.Size = new System.Drawing.Size(53, 13);
+            exitenciaLabel.TabIndex = 16;
+            exitenciaLabel.Text = "Exitencia:";
+            // 
             // ordenBindingNavigator
             // 
             this.ordenBindingNavigator.AddNewItem = null;
@@ -166,7 +175,7 @@
             this.ordenBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.ordenBindingNavigator.Name = "ordenBindingNavigator";
             this.ordenBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.ordenBindingNavigator.Size = new System.Drawing.Size(716, 27);
+            this.ordenBindingNavigator.Size = new System.Drawing.Size(802, 27);
             this.ordenBindingNavigator.TabIndex = 1;
             this.ordenBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -293,7 +302,7 @@
             // 
             // pedidoTextBox
             // 
-            this.pedidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ordenBindingSource, "Pedido", true));
+            this.pedidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ordenBindingSource, "Id", true));
             this.pedidoTextBox.Location = new System.Drawing.Point(166, 100);
             this.pedidoTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.pedidoTextBox.Name = "pedidoTextBox";
@@ -347,7 +356,7 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.Filter = "jpg, png | *.jpg *.png";
+            this.openFileDialog1.Filter = "jpg, png | *.jpg; *.png";
             // 
             // listaTiposBindingSource
             // 
@@ -391,15 +400,6 @@
             this.descripcionTextBox.Size = new System.Drawing.Size(212, 20);
             this.descripcionTextBox.TabIndex = 16;
             // 
-            // exitenciaLabel
-            // 
-            exitenciaLabel.AutoSize = true;
-            exitenciaLabel.Location = new System.Drawing.Point(98, 263);
-            exitenciaLabel.Name = "exitenciaLabel";
-            exitenciaLabel.Size = new System.Drawing.Size(53, 13);
-            exitenciaLabel.TabIndex = 16;
-            exitenciaLabel.Text = "Exitencia:";
-            // 
             // exitenciaTextBox
             // 
             this.exitenciaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ordenBindingSource, "exitencia", true));
@@ -412,7 +412,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 703);
+            this.ClientSize = new System.Drawing.Size(802, 338);
             this.Controls.Add(exitenciaLabel);
             this.Controls.Add(this.exitenciaTextBox);
             this.Controls.Add(descripcionLabel);

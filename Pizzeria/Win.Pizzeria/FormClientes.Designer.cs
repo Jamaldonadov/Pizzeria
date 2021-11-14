@@ -33,7 +33,6 @@
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nombreLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
-            this.listaClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaClientesBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -51,16 +50,17 @@
             this.activoCheckBox = new System.Windows.Forms.CheckBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.nombreTextBox = new System.Windows.Forms.TextBox();
-            this.clienteBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listaClientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.listaClientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clienteBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
             activoLabel = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingNavigator)).BeginInit();
             this.listaClientesBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBLBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBLBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // activoLabel
@@ -90,10 +90,6 @@
             nombreLabel.TabIndex = 5;
             nombreLabel.Text = "nombre:";
             // 
-            // listaClientesBindingSource
-            // 
-            this.listaClientesBindingSource.DataSource = typeof(BL.Pizzeria.Cliente);
-            // 
             // listaClientesBindingNavigator
             // 
             this.listaClientesBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -121,7 +117,7 @@
             this.listaClientesBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.listaClientesBindingNavigator.Name = "listaClientesBindingNavigator";
             this.listaClientesBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.listaClientesBindingNavigator.Size = new System.Drawing.Size(673, 25);
+            this.listaClientesBindingNavigator.Size = new System.Drawing.Size(384, 25);
             this.listaClientesBindingNavigator.TabIndex = 0;
             this.listaClientesBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -259,20 +255,24 @@
             this.nombreTextBox.Size = new System.Drawing.Size(190, 20);
             this.nombreTextBox.TabIndex = 6;
             // 
-            // clienteBLBindingSource
-            // 
-            this.clienteBLBindingSource.DataSource = typeof(BL.Pizzeria.ClienteBL);
-            // 
             // listaClientesBindingSource1
             // 
             this.listaClientesBindingSource1.DataMember = "ListaClientes";
             this.listaClientesBindingSource1.DataSource = this.clienteBLBindingSource;
             // 
+            // listaClientesBindingSource
+            // 
+            this.listaClientesBindingSource.DataSource = typeof(BL.Pizzeria.Cliente);
+            // 
+            // clienteBLBindingSource
+            // 
+            this.clienteBLBindingSource.DataSource = typeof(BL.Pizzeria.ClienteBL);
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 474);
+            this.ClientSize = new System.Drawing.Size(384, 158);
             this.Controls.Add(activoLabel);
             this.Controls.Add(this.activoCheckBox);
             this.Controls.Add(idLabel);
@@ -283,12 +283,12 @@
             this.Name = "FormClientes";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.FormClientes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingNavigator)).EndInit();
             this.listaClientesBindingNavigator.ResumeLayout(false);
             this.listaClientesBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clienteBLBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listaClientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBLBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -147,18 +147,9 @@ namespace Win.Pizzeria
             DeshabilitarHabilitarBotones(false);
         }
 
-        private void facturaDetalleDataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-            e.ThrowException = false;
-        }
+        
 
-        private void facturaDetalleDataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
-        {
-            var factura = (Factura)listaFacturasBindingSource.Current;
-            _facturaBL.CalcularFactura(factura);
-
-            listaFacturasBindingSource.ResetBindings(false);
-        }
+      
 
         private void facturaDetalleDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -177,6 +168,25 @@ namespace Win.Pizzeria
             {
                 label1.Visible = false;
             }
+        }
+
+        private void facturaDetalleDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void facturaDetalleDataGridView_DataError_1(object sender, DataGridViewDataErrorEventArgs e)
+        {
+            e.ThrowException = false;
+        }
+
+        private void facturaDetalleDataGridView_CellEndEdit_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+            var factura = (Factura)listaFacturasBindingSource.Current;
+            _facturaBL.CalcularFactura(factura);
+
+            listaFacturasBindingSource.ResetBindings(false);
         }
     }
 }
