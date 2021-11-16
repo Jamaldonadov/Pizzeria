@@ -20,8 +20,6 @@ namespace BL.Pizzeria
             {
                 _contexto = new Contexto();
                 Orden = new BindingList<NuestrasPizzas>();
-
-
             }
 
             public BindingList<NuestrasPizzas> Pedido()

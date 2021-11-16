@@ -92,5 +92,19 @@ namespace Win.Pizzeria
             formclientes.MdiParent = this;
             formclientes.Show();
         }
+
+        private void reportesDeNuestrasPizzasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteNuestrasPizzas = new FormReporteNuestrasPizzas();
+            formReporteNuestrasPizzas.MdiParent = this;
+            formReporteNuestrasPizzas.Show();
+        }
+
+        private void reporteDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteFacturas = new FormReporteFacturas();
+            formReporteFacturas.MdiParent = this;
+            formReporteFacturas.Show();
+        }
     }
 }

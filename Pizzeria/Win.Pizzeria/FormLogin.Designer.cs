@@ -54,7 +54,7 @@
             this.CerrarBoton.HoverState.ForeColor = System.Drawing.Color.White;
             this.CerrarBoton.HoverState.Parent = this.CerrarBoton;
             this.CerrarBoton.Location = new System.Drawing.Point(1497, -2);
-            this.CerrarBoton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CerrarBoton.Margin = new System.Windows.Forms.Padding(4);
             this.CerrarBoton.Name = "CerrarBoton";
             this.CerrarBoton.ShadowDecoration.Parent = this.CerrarBoton;
             this.CerrarBoton.Size = new System.Drawing.Size(64, 53);
@@ -76,7 +76,7 @@
             this.MinimizarBoton.HoverState.ForeColor = System.Drawing.Color.White;
             this.MinimizarBoton.HoverState.Parent = this.MinimizarBoton;
             this.MinimizarBoton.Location = new System.Drawing.Point(1447, -1);
-            this.MinimizarBoton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimizarBoton.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizarBoton.Name = "MinimizarBoton";
             this.MinimizarBoton.ShadowDecoration.Parent = this.MinimizarBoton;
             this.MinimizarBoton.Size = new System.Drawing.Size(59, 53);
@@ -89,7 +89,7 @@
             // 
             this.pictureLogo.Image = global::Win.Pizzeria.Properties.Resources.Logo;
             this.pictureLogo.Location = new System.Drawing.Point(192, 133);
-            this.pictureLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pictureLogo.Name = "pictureLogo";
             this.pictureLogo.Size = new System.Drawing.Size(164, 151);
             this.pictureLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -101,8 +101,8 @@
             this.pictureLogin.BackColor = System.Drawing.Color.PapayaWhip;
             this.pictureLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureLogin.Image = global::Win.Pizzeria.Properties.Resources.Login;
-            this.pictureLogin.Location = new System.Drawing.Point(519, -1);
-            this.pictureLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureLogin.Location = new System.Drawing.Point(479, -77);
+            this.pictureLogin.Margin = new System.Windows.Forms.Padding(4);
             this.pictureLogin.Name = "pictureLogin";
             this.pictureLogin.Size = new System.Drawing.Size(1043, 821);
             this.pictureLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -190,7 +190,7 @@
             this.ButtonAcceder.ForeColor = System.Drawing.Color.White;
             this.ButtonAcceder.HoverState.Parent = this.ButtonAcceder;
             this.ButtonAcceder.Location = new System.Drawing.Point(208, 561);
-            this.ButtonAcceder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ButtonAcceder.Margin = new System.Windows.Forms.Padding(4);
             this.ButtonAcceder.Name = "ButtonAcceder";
             this.ButtonAcceder.ShadowDecoration.Parent = this.ButtonAcceder;
             this.ButtonAcceder.Size = new System.Drawing.Size(107, 79);
@@ -224,7 +224,7 @@
             this.Controls.Add(this.CerrarBoton);
             this.Controls.Add(this.pictureLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
