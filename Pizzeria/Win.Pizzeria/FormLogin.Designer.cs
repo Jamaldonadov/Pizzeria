@@ -53,11 +53,10 @@
             this.CerrarBoton.HoverState.FillColor = System.Drawing.Color.OrangeRed;
             this.CerrarBoton.HoverState.ForeColor = System.Drawing.Color.White;
             this.CerrarBoton.HoverState.Parent = this.CerrarBoton;
-            this.CerrarBoton.Location = new System.Drawing.Point(1497, -2);
-            this.CerrarBoton.Margin = new System.Windows.Forms.Padding(4);
+            this.CerrarBoton.Location = new System.Drawing.Point(1123, -2);
             this.CerrarBoton.Name = "CerrarBoton";
             this.CerrarBoton.ShadowDecoration.Parent = this.CerrarBoton;
-            this.CerrarBoton.Size = new System.Drawing.Size(64, 53);
+            this.CerrarBoton.Size = new System.Drawing.Size(48, 43);
             this.CerrarBoton.TabIndex = 1;
             this.CerrarBoton.Text = "×";
             this.CerrarBoton.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
@@ -75,11 +74,10 @@
             this.MinimizarBoton.HoverState.FillColor = System.Drawing.Color.Gray;
             this.MinimizarBoton.HoverState.ForeColor = System.Drawing.Color.White;
             this.MinimizarBoton.HoverState.Parent = this.MinimizarBoton;
-            this.MinimizarBoton.Location = new System.Drawing.Point(1447, -1);
-            this.MinimizarBoton.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimizarBoton.Location = new System.Drawing.Point(1085, -1);
             this.MinimizarBoton.Name = "MinimizarBoton";
             this.MinimizarBoton.ShadowDecoration.Parent = this.MinimizarBoton;
-            this.MinimizarBoton.Size = new System.Drawing.Size(59, 53);
+            this.MinimizarBoton.Size = new System.Drawing.Size(44, 43);
             this.MinimizarBoton.TabIndex = 2;
             this.MinimizarBoton.Text = "─";
             this.MinimizarBoton.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
@@ -88,10 +86,9 @@
             // pictureLogo
             // 
             this.pictureLogo.Image = global::Win.Pizzeria.Properties.Resources.Logo;
-            this.pictureLogo.Location = new System.Drawing.Point(192, 133);
-            this.pictureLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureLogo.Location = new System.Drawing.Point(144, 108);
             this.pictureLogo.Name = "pictureLogo";
-            this.pictureLogo.Size = new System.Drawing.Size(164, 151);
+            this.pictureLogo.Size = new System.Drawing.Size(123, 123);
             this.pictureLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureLogo.TabIndex = 3;
             this.pictureLogo.TabStop = false;
@@ -101,10 +98,9 @@
             this.pictureLogin.BackColor = System.Drawing.Color.PapayaWhip;
             this.pictureLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureLogin.Image = global::Win.Pizzeria.Properties.Resources.Login;
-            this.pictureLogin.Location = new System.Drawing.Point(479, -77);
-            this.pictureLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureLogin.Location = new System.Drawing.Point(389, -1);
             this.pictureLogin.Name = "pictureLogin";
-            this.pictureLogin.Size = new System.Drawing.Size(1043, 821);
+            this.pictureLogin.Size = new System.Drawing.Size(782, 667);
             this.pictureLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureLogin.TabIndex = 0;
             this.pictureLogin.TabStop = false;
@@ -113,10 +109,9 @@
             // 
             this.labelLogin.AutoSize = true;
             this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogin.Location = new System.Drawing.Point(191, 309);
-            this.labelLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelLogin.Location = new System.Drawing.Point(143, 251);
             this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(132, 36);
+            this.labelLogin.Size = new System.Drawing.Size(109, 29);
             this.labelLogin.TabIndex = 4;
             this.labelLogin.Text = "Ingresar";
             // 
@@ -137,17 +132,18 @@
             this.TextBoxUsuario.ForeColor = System.Drawing.Color.Gray;
             this.TextBoxUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextBoxUsuario.HoverState.Parent = this.TextBoxUsuario;
-            this.TextBoxUsuario.Location = new System.Drawing.Point(97, 385);
-            this.TextBoxUsuario.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.TextBoxUsuario.Location = new System.Drawing.Point(73, 313);
+            this.TextBoxUsuario.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.TextBoxUsuario.Name = "TextBoxUsuario";
             this.TextBoxUsuario.PasswordChar = '\0';
             this.TextBoxUsuario.PlaceholderForeColor = System.Drawing.Color.Black;
             this.TextBoxUsuario.PlaceholderText = "USUARIO";
             this.TextBoxUsuario.SelectedText = "";
             this.TextBoxUsuario.ShadowDecoration.Parent = this.TextBoxUsuario;
-            this.TextBoxUsuario.Size = new System.Drawing.Size(327, 44);
+            this.TextBoxUsuario.Size = new System.Drawing.Size(245, 36);
             this.TextBoxUsuario.TabIndex = 5;
             this.TextBoxUsuario.TextChanged += new System.EventHandler(this.TextBoxUsuario_TextChanged);
+            this.TextBoxUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxUsuario_KeyPress);
             // 
             // TextBoxContra
             // 
@@ -166,17 +162,18 @@
             this.TextBoxContra.ForeColor = System.Drawing.Color.Gray;
             this.TextBoxContra.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextBoxContra.HoverState.Parent = this.TextBoxContra;
-            this.TextBoxContra.Location = new System.Drawing.Point(97, 454);
-            this.TextBoxContra.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.TextBoxContra.Location = new System.Drawing.Point(73, 369);
+            this.TextBoxContra.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.TextBoxContra.Name = "TextBoxContra";
             this.TextBoxContra.PasswordChar = '*';
             this.TextBoxContra.PlaceholderForeColor = System.Drawing.Color.Black;
             this.TextBoxContra.PlaceholderText = "CONTRASEÑA";
             this.TextBoxContra.SelectedText = "";
             this.TextBoxContra.ShadowDecoration.Parent = this.TextBoxContra;
-            this.TextBoxContra.Size = new System.Drawing.Size(327, 44);
+            this.TextBoxContra.Size = new System.Drawing.Size(245, 36);
             this.TextBoxContra.TabIndex = 6;
             this.TextBoxContra.TextChanged += new System.EventHandler(this.TextBoxContra_TextChanged);
+            this.TextBoxContra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBoxContra_KeyPress);
             // 
             // ButtonAcceder
             // 
@@ -189,11 +186,10 @@
             this.ButtonAcceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonAcceder.ForeColor = System.Drawing.Color.White;
             this.ButtonAcceder.HoverState.Parent = this.ButtonAcceder;
-            this.ButtonAcceder.Location = new System.Drawing.Point(208, 561);
-            this.ButtonAcceder.Margin = new System.Windows.Forms.Padding(4);
+            this.ButtonAcceder.Location = new System.Drawing.Point(156, 456);
             this.ButtonAcceder.Name = "ButtonAcceder";
             this.ButtonAcceder.ShadowDecoration.Parent = this.ButtonAcceder;
-            this.ButtonAcceder.Size = new System.Drawing.Size(107, 79);
+            this.ButtonAcceder.Size = new System.Drawing.Size(80, 64);
             this.ButtonAcceder.TabIndex = 7;
             this.ButtonAcceder.Text = "→";
             this.ButtonAcceder.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAliasGridFit;
@@ -202,18 +198,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(194, 112);
+            this.label1.Location = new System.Drawing.Point(146, 91);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 17);
+            this.label1.Size = new System.Drawing.Size(110, 13);
             this.label1.TabIndex = 8;
             this.label1.Text = "Pizzeria el buen gusto";
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1559, 816);
+            this.ClientSize = new System.Drawing.Size(1169, 663);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ButtonAcceder);
             this.Controls.Add(this.TextBoxContra);
@@ -224,7 +221,6 @@
             this.Controls.Add(this.CerrarBoton);
             this.Controls.Add(this.pictureLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

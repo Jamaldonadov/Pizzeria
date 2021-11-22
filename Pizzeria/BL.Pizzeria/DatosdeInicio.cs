@@ -15,6 +15,7 @@ namespace BL.Pizzeria
             var UsarioAdmin = new Usuario();
             UsarioAdmin.nombre = "admin";
             UsarioAdmin.Contrasena = "123";
+            UsarioAdmin.TipoUsuario = "Administradores";
 
             contexto.Usuarios.Add(UsarioAdmin);
 

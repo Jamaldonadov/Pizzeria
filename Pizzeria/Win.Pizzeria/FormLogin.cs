@@ -72,6 +72,13 @@ namespace Win.Pizzeria
         //CODIGO PARA EL INICIO DE SESION
         private void ButtonAcceder_Click(object sender, EventArgs e)
         {
+
+            Login();
+
+        }
+
+        private void Login()
+        {
             string usuario;
             string contraseña;
 
@@ -79,13 +86,18 @@ namespace Win.Pizzeria
             contraseña = TextBoxContra.Text;
 
             Application.DoEvents();
-            var resultado =  _seguridad.Autorizar(usuario, contraseña);
+            var usuarioDB = _seguridad.Autorizar(usuario, contraseña);
 
-            if (resultado == true)
+            if (usuarioDB != null)
             {
+                Program.UsuarioLogueado = usuarioDB;
+
                 FormMenu llamar = new FormMenu();
                 llamar.Show();
                 this.Hide();
+
+
+
             }
 
             else
@@ -95,7 +107,6 @@ namespace Win.Pizzeria
 
                 error = errormensaje.ShowDialog();
             }
-
         }
 
         // CODIGO PARA DESBLOQUEAR BOTON
@@ -119,6 +130,23 @@ namespace Win.Pizzeria
             else
                 ButtonAcceder.Enabled = false;
 
+        }
+
+        private void TextBoxUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (TextBoxUsuario.Text != "" && e.KeyChar == (char)Keys.Enter)
+            {
+                TextBoxContra.Focus();
+            }
+        }
+
+        private void TextBoxContra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (TextBoxUsuario.Text != "" && TextBoxContra.Text
+                != "" && e.KeyChar == (char)Keys.Enter)
+            {
+                Login();
+            }
         }
     }
 }

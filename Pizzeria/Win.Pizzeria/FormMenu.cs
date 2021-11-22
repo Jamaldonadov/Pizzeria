@@ -23,12 +23,107 @@ namespace Win.Pizzeria
         private void FormMenu_Load(object sender, EventArgs e)
         {
 
+            if (Program.UsuarioLogueado != null)
+            {
+                toolStripStatusLabel1.Text = "Usuario: "
+                    + Program.UsuarioLogueado.nombre;
+
+
+                if (Program.UsuarioLogueado.TipoUsuario == "Usuarios Caja")
+                {
+                    nuestrasPizzasToolStripMenuItem.Visible = false;
+                    clientesToolStripMenuItem.Visible = false;
+                    facturaToolStripMenuItem.Visible = true;
+                    usuarioToolStripMenuItem.Visible = false;
+                    reportesDeNuestrasPizzasToolStripMenuItem.Visible = false;
+                    reporteDeFacturasToolStripMenuItem.Visible = true;
+                }
+
+                if (Program.UsuarioLogueado.TipoUsuario == "Usuarios Ventas")
+                {
+                    nuestrasPizzasToolStripMenuItem.Visible = false;
+                    clientesToolStripMenuItem.Visible = true;
+                    facturaToolStripMenuItem.Visible = false;
+                    usuarioToolStripMenuItem.Visible = false;
+                    reportesDeNuestrasPizzasToolStripMenuItem.Visible = false;
+                    reporteDeFacturasToolStripMenuItem.Visible = false;
+                }
+
+                if (Program.UsuarioLogueado.TipoUsuario == "Administradores")
+                {
+                    nuestrasPizzasToolStripMenuItem.Visible = true;
+                    clientesToolStripMenuItem.Visible = true;
+                    facturaToolStripMenuItem.Visible = true;
+                    usuarioToolStripMenuItem.Visible = true;
+                    reportesDeNuestrasPizzasToolStripMenuItem.Visible = true;
+                    reporteDeFacturasToolStripMenuItem.Visible = true;
+                }
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
+           
+
+            Form[] forms = Application.OpenForms.Cast<Form>().ToArray();
+            foreach (Form f in forms)
+            {
+                if (f.Name != "FormMenu" && f.Name != "FormLogin")
+                {
+                    f.Close();
+                }
+
+            }
+
             var formlogin = new FormLogin();
             formlogin.ShowDialog();
+
+            if (Program.UsuarioLogueado != null)
+            {
+                toolStripStatusLabel1.Text = "Usuario: "
+                    + Program.UsuarioLogueado.nombre;
+
+
+                if (Program.UsuarioLogueado.TipoUsuario == "Usuarios Caja")
+                {
+                    nuestrasPizzasToolStripMenuItem.Visible = false;
+                    clientesToolStripMenuItem.Visible = false;
+                    facturaToolStripMenuItem.Visible = true;
+                    usuarioToolStripMenuItem.Visible = false;
+                    reportesDeNuestrasPizzasToolStripMenuItem.Visible = false;
+                    reporteDeFacturasToolStripMenuItem.Visible = true;
+                }
+
+                if (Program.UsuarioLogueado.TipoUsuario == "Usuarios Ventas")
+                {
+                    nuestrasPizzasToolStripMenuItem.Visible = false;
+                    clientesToolStripMenuItem.Visible = true;
+                    facturaToolStripMenuItem.Visible = false;
+                    usuarioToolStripMenuItem.Visible = false;
+                    reportesDeNuestrasPizzasToolStripMenuItem.Visible = false;
+                    reporteDeFacturasToolStripMenuItem.Visible = false;
+                }
+
+                if (Program.UsuarioLogueado.TipoUsuario == "Administradores")
+                {
+                    nuestrasPizzasToolStripMenuItem.Visible = true;
+                    clientesToolStripMenuItem.Visible = true;
+                    facturaToolStripMenuItem.Visible = true;
+                    usuarioToolStripMenuItem.Visible = true;
+                    reportesDeNuestrasPizzasToolStripMenuItem.Visible = true;
+                    reporteDeFacturasToolStripMenuItem.Visible = true;
+                }
+            }
+            else
+            {
+                Application.Exit();
+            }
+
         }
 
         private void pedidosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -106,5 +201,14 @@ namespace Win.Pizzeria
             formReporteFacturas.MdiParent = this;
             formReporteFacturas.Show();
         }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formusuario = new FormUsuario();
+            formusuario.MdiParent = this;
+            formusuario.Show();
+
+        }
     }
-}
+    }
+

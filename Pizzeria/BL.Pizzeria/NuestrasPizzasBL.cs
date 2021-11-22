@@ -30,6 +30,14 @@ namespace BL.Pizzeria
                 return Orden;
             }
 
+        public BindingList<NuestrasPizzas> Pedido(string buscar)
+        {
+
+            var resultado = _contexto.Nuestrapizzas.Where(r => r.Descripcion.Contains(buscar));
+
+            return new BindingList<NuestrasPizzas> (resultado.ToList());
+        }
+
         public void CancelarCambios()
         {
             foreach (var item in _contexto.ChangeTracker.Entries())

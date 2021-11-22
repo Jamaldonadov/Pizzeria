@@ -65,6 +65,8 @@
             this.tipoIdComboBox = new System.Windows.Forms.ComboBox();
             this.descripcionTextBox = new System.Windows.Forms.TextBox();
             this.exitenciaTextBox = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             disponibleLabel = new System.Windows.Forms.Label();
             pedidoLabel = new System.Windows.Forms.Label();
             precioLabel = new System.Windows.Forms.Label();
@@ -294,7 +296,7 @@
             // 
             this.disponibleCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.ordenBindingSource, "Disponible", true));
             this.disponibleCheckBox.Location = new System.Drawing.Point(156, 285);
-            this.disponibleCheckBox.Margin = new System.Windows.Forms.Padding(2);
+            this.disponibleCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.disponibleCheckBox.Name = "disponibleCheckBox";
             this.disponibleCheckBox.Size = new System.Drawing.Size(78, 20);
             this.disponibleCheckBox.TabIndex = 3;
@@ -304,7 +306,7 @@
             // 
             this.pedidoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ordenBindingSource, "Id", true));
             this.pedidoTextBox.Location = new System.Drawing.Point(166, 100);
-            this.pedidoTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.pedidoTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pedidoTextBox.Name = "pedidoTextBox";
             this.pedidoTextBox.ReadOnly = true;
             this.pedidoTextBox.Size = new System.Drawing.Size(212, 20);
@@ -315,7 +317,7 @@
             // 
             this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ordenBindingSource, "Precio", true));
             this.precioTextBox.Location = new System.Drawing.Point(166, 203);
-            this.precioTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.precioTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.precioTextBox.Name = "precioTextBox";
             this.precioTextBox.Size = new System.Drawing.Size(212, 20);
             this.precioTextBox.TabIndex = 7;
@@ -408,11 +410,32 @@
             this.exitenciaTextBox.Size = new System.Drawing.Size(212, 20);
             this.exitenciaTextBox.TabIndex = 17;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(486, 24);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(146, 20);
+            this.textBox1.TabIndex = 18;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(638, 24);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(56, 19);
+            this.button3.TabIndex = 19;
+            this.button3.Text = "Buscar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // FormNuestrasPizzas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 338);
+            this.ClientSize = new System.Drawing.Size(802, 376);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(exitenciaLabel);
             this.Controls.Add(this.exitenciaTextBox);
             this.Controls.Add(descripcionLabel);
@@ -431,7 +454,7 @@
             this.Controls.Add(precioLabel);
             this.Controls.Add(this.precioTextBox);
             this.Controls.Add(this.ordenBindingNavigator);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormNuestrasPizzas";
             this.Text = "NuestrasPizzas";
             this.Load += new System.EventHandler(this.FormNuestrasPizzas_Load);
@@ -476,5 +499,7 @@
         private System.Windows.Forms.ComboBox tipoIdComboBox;
         private System.Windows.Forms.TextBox descripcionTextBox;
         private System.Windows.Forms.TextBox exitenciaTextBox;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button3;
     }
 }

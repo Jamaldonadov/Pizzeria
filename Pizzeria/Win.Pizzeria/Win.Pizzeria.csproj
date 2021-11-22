@@ -144,6 +144,12 @@
     <Compile Include="FormReporteNuestrasPizzas.Designer.cs">
       <DependentUpon>FormReporteNuestrasPizzas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsuario.Designer.cs">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="MessageBoxLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,7 @@
       <DependentUpon>SubReporte.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Utilidades.cs" />
     <EmbeddedResource Include="FormBebidas.resx">
       <DependentUpon>FormBebidas.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormReporteNuestrasPizzas.resx">
       <DependentUpon>FormReporteNuestrasPizzas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUsuario.resx">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MessageBoxLogin.resx">
       <DependentUpon>MessageBoxLogin.cs</DependentUpon>
